@@ -60,5 +60,10 @@
 			<type>2</type>
 			<location>E:/GitHub/ArcturusAdminApi3.0/CommonCISValidation/src</location>
 		</link>
+		<link>
+			<name>DeletePatientService</name>
+			<type>2</type>
+			<location>E:/GitHub/ArcturusAdminApi3.0/DeletePatientService/src</location>
+		</link>
 	</linkedResources>
 </projectDescription>
