@@ -125,8 +125,7 @@ public CISResults deletePatientMessages(String patientId) {
 		
 	} catch (DataAccessException e) {
 		e.printStackTrace();
-		cisResults.setResponseCode(CISConstants.RESPONSE_FAILURE);
-		cisResults.setErrorMessage("Failed to get Profile Data");
+				
 	}
 		return cisResults; 
 }
