@@ -24,8 +24,7 @@ public CISResults deletePatient(String patientId) {
 			
 		} catch (DataAccessException e) {
 			e.printStackTrace();
-			cisResults.setResponseCode(CISConstants.RESPONSE_FAILURE);
-			cisResults.setErrorMessage("Failed to get Profile Data");
+			
 		}
    		return cisResults; 
 	}
@@ -45,8 +44,7 @@ public CISResults deleteUserDevicesPatient(String patientId) {
 		
 	} catch (DataAccessException e) {
 		e.printStackTrace();
-		cisResults.setResponseCode(CISConstants.RESPONSE_FAILURE);
-		cisResults.setErrorMessage("Failed to get Profile Data");
+		
 	}
 		return cisResults; 
 }
@@ -65,8 +63,7 @@ public CISResults deletePatientFm(String patientId) {
 		
 	} catch (DataAccessException e) {
 		e.printStackTrace();
-		cisResults.setResponseCode(CISConstants.RESPONSE_FAILURE);
-		cisResults.setErrorMessage("Failed to get Profile Data");
+		
 	}
 		return cisResults; 
 }
@@ -85,8 +82,7 @@ public CISResults deletePatientPhoneNumber(String patientId) {
 		
 	} catch (DataAccessException e) {
 		e.printStackTrace();
-		cisResults.setResponseCode(CISConstants.RESPONSE_FAILURE);
-		cisResults.setErrorMessage("Failed to get Profile Data");
+	
 	}
 		return cisResults; 
 }
@@ -105,8 +101,7 @@ public CISResults deletePatientAppointments(String patientId) {
 		
 	} catch (DataAccessException e) {
 		e.printStackTrace();
-		cisResults.setResponseCode(CISConstants.RESPONSE_FAILURE);
-		cisResults.setErrorMessage("Failed to get Profile Data");
+		
 	}
 		return cisResults; 
 }
