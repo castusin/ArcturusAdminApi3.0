@@ -65,5 +65,10 @@
 			<type>2</type>
 			<location>E:/GitHub/ArcturusAdminApi3.0/DeletePatientService/src</location>
 		</link>
+		<link>
+			<name>GetFamilymemberDetails</name>
+			<type>2</type>
+			<location>E:/GitHub/ArcturusAdminApi3.0/GetFamilymemberDetails/src</location>
+		</link>
 	</linkedResources>
 </projectDescription>
