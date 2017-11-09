@@ -11,7 +11,7 @@ public class GetFamilymemberDetailsWebservice {
 	
 	public CISResults getFamilyMember(String memberId) {
 		
-		 CISResults cisResult = detailsBL.getFamilyMember(memberId);
+		 CISResults cisResult =  detailsBL.getFamilyMember(memberId);
 		 logger.info(" DigitalHealthCare:FamilyMember Details webservice :"+cisResult);
 		return cisResult;
 	}

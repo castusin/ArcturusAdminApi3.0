@@ -3,12 +3,11 @@ package com.cis;
 public class CISConstants {
 	public static final String RESPONSE_SUCCESS = "0";
 	public static final String RESPONSE_FAILURE="1";
-	public static final int OTP_TIME=10;
-	public static final int SESSION_TIME=1440;
+
+	
 	public static final String TIME_ZONE="CST";
 	public static final String TIME_ZONE2="IST";
-	public static final String SESSION_STATUS="Session is Expired";
-	public static final String OTP_TIME_STATUS="OTP is expired";
+	
 	public static final String USA_COUNTRY_CODE="1";
 	public static final String YES = "Y";
 	public static final String GS_DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
@@ -19,7 +18,6 @@ public class CISConstants {
 	public static final String SQL_ERROR_CODE = "1001";
 	public static final String Empty="";
 	public static final String DATE_FORMAT="yyyy-MM-dd HH:mm:ss.SSS";
-	public static final String DATABASE_NAME="jdbc/SimpleMoneyDB";
 	public static final String ACCOUNT_STATUS1="Account already exists, please login";
 	public static final String ACCOUNT_STATUS5="Account already exists ";
 	public static final String ACCOUNT_STATUS6="Already Added CareTaker to Patient";
@@ -77,6 +75,10 @@ public class CISConstants {
 	
 	public static final String CNA ="CNA";
 	public static final String DIRECTOREMAIL ="prasad9620@gmail.com";
+	public static final String OTP_TIME_STATUS = null;
+	public static final long OTP_TIME = 0;
+	public static final long SESSION_TIME = 0;
+	public static final String SESSION_STATUS = null;
 	public CISConstants() {
 		
 	}

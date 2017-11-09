@@ -17,7 +17,7 @@ public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
 	GetFamilymemberDetailsModel memberDetails = new GetFamilymemberDetailsModel();
 	
 	
-	memberDetails.setUserId(rs.getString("Fm_id"));
+	memberDetails.setPhoneNumber(rs.getString("Phone_number"));
 	
 	
 	return memberDetails;

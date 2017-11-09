@@ -5,6 +5,7 @@ public class GetFamilymemberModel {
 	
 	public String memberId;
 	
+	
 	public GetFamilymemberModel(String memberId) {
 		super();
 		

@@ -6,6 +6,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="DeleteDeviceService"/>
+	<classpathentry kind="src" path="UpdateDeviceService"/>
+	<classpathentry kind="src" path="GetProfilesService"/>
+	<classpathentry kind="src" path="DeleteCareTakerService"/>
 	<classpathentry kind="src" path="CISSessions"/>
 	<classpathentry kind="src" path="GetFamilymemberDetails"/>
 	<classpathentry kind="src" path="DeletePatientService"/>

@@ -9,11 +9,15 @@ import com.cis.CISResults;
 import com.cis.TimeCheck;
 import com.cis.testServiceTime;
 
+import java.util.List;
+
 public class GetFamilymemberDetailsDAO extends JdbcDaoSupport {
 	
 	
-	public CISResults getFamilyMember(String memberId) {
+	public List<GetFamilymemberDetailsModel> getFamilyMember(String memberId) {
 		GetFamilymemberDetailsModel memberDetails;
+		
+		List<GetFamilymemberDetailsModel> familyPhoneList = null;
 		CISResults cisResults=new CISResults();
 		cisResults.setResponseCode(CISConstants.RESPONSE_SUCCESS);
 		Logger logger = Logger.getLogger(GetFamilymemberDetailsDAO.class);
@@ -23,13 +27,13 @@ public class GetFamilymemberDetailsDAO extends JdbcDaoSupport {
 			 TimeCheck time=new TimeCheck();
 			 testServiceTime sessionTimeCheck=new testServiceTime();
 			 String serviceStartTime=time.getTimeZone();
-			 memberDetails=(GetFamilymemberDetailsModel)getJdbcTemplate().queryForObject(GetFamilymemberDetailsQuery.SQL_MEMBERID,inputs,new GetFamilymemberMapper());
+			 familyPhoneList=getJdbcTemplate().query(GetFamilymemberDetailsQuery.SQL_MEMBERID,inputs,new GetFamilymemberMapper());
 			 String serviceEndTime=time.getTimeZone();
 			 long result=sessionTimeCheck.getServiceTime(serviceEndTime,serviceStartTime);
 			 logger.info("Get member details query time:: " +result);
 			
 			
-			cisResults.setResultObject(memberDetails);
+			//cisResults.setResultObject(res);
 		} catch (DataAccessException e) {
 			e.printStackTrace();
 		
@@ -37,12 +41,13 @@ public class GetFamilymemberDetailsDAO extends JdbcDaoSupport {
 			cisResults.setErrorMessage("Failed to get Profile Data");
 		}
 
-   		return cisResults;  
+   		return familyPhoneList;  
 	}
 
 	public CISResults getFamilyMemberDetails(String familyUserId) {
 
 		GetFamilymemberDetailsModel memberDetails;
+		List<GetFamilymemberDetailsModel> familyLilst=null;
 		CISResults cisResults=new CISResults();
 		cisResults.setResponseCode(CISConstants.RESPONSE_SUCCESS);
 		Logger logger = Logger.getLogger(GetFamilymemberDetailsDAO.class);
@@ -52,13 +57,46 @@ public class GetFamilymemberDetailsDAO extends JdbcDaoSupport {
 			 TimeCheck time=new TimeCheck();
 			 testServiceTime sessionTimeCheck=new testServiceTime();
 			 String serviceStartTime=time.getTimeZone();
-			 memberDetails=(GetFamilymemberDetailsModel)getJdbcTemplate().queryForObject(GetFamilymemberDetailsQuery.SQL_MEMBERDETAILS,inputs,new GetFamilymemberDetailsMapper());
+			 GetFamilymemberDetailsModel res=(GetFamilymemberDetailsModel)getJdbcTemplate().queryForObject(GetFamilymemberDetailsQuery.SQL_MEMBERDETAILS,inputs,new GetFamilymemberDetailsMapper());
+			
+			 
 			 String serviceEndTime=time.getTimeZone();
 			 long result=sessionTimeCheck.getServiceTime(serviceEndTime,serviceStartTime);
 			 logger.info("Get member details query time:: " +result);
 			
 			
-			cisResults.setResultObject(memberDetails);
+			cisResults.setResultObject(res);
+		} catch (DataAccessException e) {
+			e.printStackTrace();
+		
+			cisResults.setResponseCode(CISConstants.RESPONSE_FAILURE);
+			
+			//cisResults.setErrorMessage("Failed to get Profile Data");
+		}
+
+   		return cisResults;  
+	}
+
+	public List<GetFamilymemberDetailsModel> getFamilyDetails(String familyId) {
+
+
+		List<GetFamilymemberDetailsModel> familyLilst=null;
+		CISResults cisResults=new CISResults();
+		cisResults.setResponseCode(CISConstants.RESPONSE_SUCCESS);
+		Logger logger = Logger.getLogger(GetFamilymemberDetailsDAO.class);
+		Object[] inputs = new Object[]{familyId};
+		try{
+			// Capture service Start time
+			 TimeCheck time=new TimeCheck();
+			 testServiceTime sessionTimeCheck=new testServiceTime();
+			 String serviceStartTime=time.getTimeZone();
+			 familyLilst=getJdbcTemplate().query(GetFamilymemberDetailsQuery.SQL_FamilyMEMBERDETAILS,inputs,new GetFamilymemberDetailsMapper());
+			 String serviceEndTime=time.getTimeZone();
+			 long result=sessionTimeCheck.getServiceTime(serviceEndTime,serviceStartTime);
+			 logger.info("Get member details query time:: " +result);
+			
+			
+			//cisResults.setResultObject(res);
 		} catch (DataAccessException e) {
 			e.printStackTrace();
 		
@@ -66,7 +104,8 @@ public class GetFamilymemberDetailsDAO extends JdbcDaoSupport {
 			cisResults.setErrorMessage("Failed to get Profile Data");
 		}
 
-   		return cisResults;  
+   		return familyLilst;  
 	}
+	
 
 }

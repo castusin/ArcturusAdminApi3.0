@@ -22,6 +22,19 @@
 		<property name="dataSource" ref="ds" />
 	</bean>
 	
+	<bean id="DeleteCareTaker" class="com.digitalhealthcare.DigitalHealthcareDeleteCareTakerDAO">
+		<property name="dataSource" ref="ds" />
+	</bean>
+	
+	<bean id="getPatientProfiles" class="com.digitalhealthcare.GetProfilesDAO">
+		<property name="dataSource" ref="ds" />
+	</bean>
+	
+	
+	<bean id="deleteUserDevice" class="com.digitalhealthcare.DeleteDeviceDAO">
+		<property name="dataSource" ref="ds" />
+	</bean>
+	
 <!-- Development  DB connections     --> 
 
 <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  

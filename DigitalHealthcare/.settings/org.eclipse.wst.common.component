@@ -11,6 +11,10 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/DeletePatientService"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/GetFamilymemberDetails"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/CISSessions"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/DeleteCareTakerService"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/GetProfilesService"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/UpdateDeviceService"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/DeleteDeviceService"/>
         <property name="context-root" value="DigitalHealthcare"/>
         <property name="java-output-path" value="/DigitalHealthcare/target/classes"/>
     </wb-module>

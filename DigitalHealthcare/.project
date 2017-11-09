@@ -61,6 +61,16 @@
 			<location>E:/GitHub/ArcturusAdminApi3.0/CommonCISValidation/src</location>
 		</link>
 		<link>
+			<name>DeleteCareTakerService</name>
+			<type>2</type>
+			<location>E:/GitHub/ArcturusAdminApi3.0/DeleteCareTakerService/src</location>
+		</link>
+		<link>
+			<name>DeleteDeviceService</name>
+			<type>2</type>
+			<location>E:/GitHub/ArcturusAdminApi3.0/DeleteDeviceService/src</location>
+		</link>
+		<link>
 			<name>DeletePatientService</name>
 			<type>2</type>
 			<location>E:/GitHub/ArcturusAdminApi3.0/DeletePatientService/src</location>
@@ -69,6 +79,16 @@
 			<name>GetFamilymemberDetails</name>
 			<type>2</type>
 			<location>E:/GitHub/ArcturusAdminApi3.0/GetFamilymemberDetails/src</location>
+		</link>
+		<link>
+			<name>GetProfilesService</name>
+			<type>2</type>
+			<location>E:/GitHub/ArcturusAdminApi3.0/GetProfilesService/src</location>
+		</link>
+		<link>
+			<name>UpdateDeviceService</name>
+			<type>2</type>
+			<location>E:/GitHub/ArcturusAdminApi3.0/UpdateDeviceService/src</location>
 		</link>
 	</linkedResources>
 </projectDescription>

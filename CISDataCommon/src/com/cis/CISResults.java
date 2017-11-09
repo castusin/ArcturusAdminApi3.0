@@ -1,6 +1,10 @@
 package com.cis;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import com.digitalhealthcare.GetFamilymemberDetailsModel;
+import com.digitalhealthcare.GetProfilesModel;
 
 public class CISResults {
 	public static final String GS_DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
@@ -9,6 +13,14 @@ public class CISResults {
 	String warningMessage; // if any
 	String dateFormat;
 	Object resultObject;
+	
+	public List<GetFamilymemberDetailsModel> familymemberslist;
+	public List<GetFamilymemberDetailsModel> unregisteredUsers;
+	
+	public GetProfilesModel profiledetails;
+	
+	
+	
 	//public List<DigiHealthCareViewPatientsService> patientDetails;
 	/*public List<StartDateTime> startTimeList;
 	public List<EndDateTime> endTimeList;
@@ -29,8 +41,53 @@ public class CISResults {
 		this.endTimeList = endTimeList;
 	}
 */
+	
+	
+
+	public GetProfilesModel getProfiledetails() {
+		return profiledetails;
+	}
+
+
+
+
+
+	public void setProfiledetails(GetProfilesModel profiledetails) {
+		this.profiledetails = profiledetails;
+	}
+
+
+
+
+
 	public String getDateErrorFormat() {
 		return dateFormat;
+	}
+
+	
+
+	
+
+	public List<GetFamilymemberDetailsModel> getUnregisteredUsers() {
+		return unregisteredUsers;
+	}
+
+
+
+	public void setUnregisteredUsers(
+			List<GetFamilymemberDetailsModel> unregisteredUsers) {
+		this.unregisteredUsers = unregisteredUsers;
+	}
+
+
+
+	public List<GetFamilymemberDetailsModel> getFamilymemberslist() {
+		return familymemberslist;
+	}
+
+	public void setFamilymemberslist(
+			List<GetFamilymemberDetailsModel> familymemberslist) {
+		this.familymemberslist = familymemberslist;
 	}
 
 	public void setDateErrorFormat(String dateErrorFormat) {
